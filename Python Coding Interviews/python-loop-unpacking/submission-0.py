@@ -1,0 +1,21 @@
+from typing import List, Tuple
+
+"""
+Unpack each tuple into two vars
+Store highest score with respective name
+
+"""
+def best_student(scores: List[Tuple[str, int]]) -> str:
+    top_scorer, highest_score = "", 0
+    for name, score in scores:
+        if score > highest_score:
+            highest_score = score
+            top_scorer = name
+    return top_scorer
+
+
+# do not modify below this line
+print(best_student([("Alice", 90), ("Bob", 80), ("Charlie", 70)]))
+print(best_student([("Alice", 90), ("Bob", 80), ("Charlie", 100)]))
+print(best_student([("Alice", 90), ("Bob", 100), ("Charlie", 70)]))
+print(best_student([("Alice", 90), ("Bob", 90), ("Charlie", 80), ("David", 100)]))
