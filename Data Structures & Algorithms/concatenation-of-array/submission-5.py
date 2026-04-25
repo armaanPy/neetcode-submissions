@@ -1,0 +1,12 @@
+class Solution:
+    def getConcatenation(self, nums: List[int]) -> List[int]:
+        # Simple method
+        # ans = nums * 2
+        # return ans
+        
+        # Algo
+        ans = []
+        for i in range(2):
+            for num in nums:
+                ans.append(num)
+        return ans
